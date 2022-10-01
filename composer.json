@@ -16,5 +16,13 @@
             "name": "cycle20",
             "email": "46718432+cycle20@users.noreply.github.com"
         }
-    ]
+    ],
+    "scripts": {
+        "tests": [
+            "./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }
