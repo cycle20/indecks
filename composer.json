@@ -11,6 +11,11 @@
             "Cycle20\\Indecks\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Cycle20\\Indecks\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "cycle20",
@@ -18,6 +23,9 @@
         }
     ],
     "scripts": {
+        "scrape": [
+            "@php src/Main.php"
+        ],
         "tests": [
             "./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests"
         ]
