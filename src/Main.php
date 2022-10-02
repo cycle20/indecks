@@ -23,15 +23,17 @@ class Main {
         $client = new GooseClient([
             'language' => 'hu'
         ]);
-        $article = $client->extractContent("$BASE/kulfold/2022/10/01/orosz-ukran-konfliktus-haboru-gazdasagi-valsag-recesszio-europai-unio-oroszorszag-vlagyimir-putyin/");
+        $article = $client->extractContent("$BASE/24ora/rss");
         $collection = [
             'title' => $article->getTitle(),
             'metaDescription' => $article->getMetaDescription(),
             'metaKeywords' => $article->getMetaKeywords(),
             'pop.words' => $article->getPopularWords(),
             'text' => $article->getCleanedArticleText(),
+            'raw' => $article->getRawDoc()
         ];
         printf("{$collection['text']}\n");
+        printf("{$collection['raw']}\n");
     }
 }
 
